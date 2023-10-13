@@ -1,6 +1,12 @@
-# DadjokesAI web backend
+# LLM Dadjokes web backend
 
-Site: [DadJokeAI.com](https://DadJokeAI.com)
+Built for Merantix GenAI hackathon.
+
+> 👨: What should you never write in a readme on github?
+> 
+> 🤖: The program's source
+
+Site: [https://dadjokes.dfdx.me](https://dadjokes.dfdx.me)
 
 Model: [https://huggingface.co/shuttie/Mistral-7B-DadJokes-GGUF](https://huggingface.co/shuttie/Mistral-7B-DadJokes-GGUF)
 
