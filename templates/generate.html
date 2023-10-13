@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+
+      <div class="container my-5 mx-5 mx-auto align-items-center">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">&#128104;: {{ joke.base }}</h5>
+            <h4 class="card-text">&#129302;: {{ joke.punchline }}</p>
+            
+          </div>
+          <div class="card-footer text-body-secondary">
+            <div class="container my-1 mx-1 mx-auto align-items-center">
+              <div class="gap-2 row align-items-center">
+                <div class="col-sm-8 d-flex">
+                	Prompt: {{ joke['prompt_ms'] }}ms |
+                	Gen: {{ joke['predicted_ms'] }}ms | 
+                	Tokens: {{ joke['prompt_n'] }} + {{ joke['predicted_n'] }} |
+                	{{ joke['predicted_per_token_ms']}} ms/tok
+                </div>
+                <div class="col"></div>
+                <div class="col-sm-1 text-end gap-2">
+                	<form  action="generate" method="post">
+                		<input type="hidden" name="prompt" value="{{ joke.base }}">
+                  	<button type="submit" class="btn btn-primary">
+                    	<i class="bi bi-arrow-clockwise"></i>
+                  	</button>
+                	</form>
+              	</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+{% endblock %}
